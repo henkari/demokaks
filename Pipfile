@@ -1,0 +1,38 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+"backports.entry-points-selectable" = "==1.1.0"
+certifi = "==2021.10.8"
+click = "==8.0.3"
+colorama = "==0.4.4"
+distlib = "==0.3.3"
+filelock = "==3.3.1"
+greenlet = "==1.1.2"
+gunicorn = "==20.1.0"
+itsdangerous = "==2.0.1"
+pdoc3 = "==0.10.0"
+pipenv = "==2021.5.29"
+platformdirs = "==2.4.0"
+python-dotenv = "==0.19.1"
+six = "==1.16.0"
+termcolor = "==1.1.0"
+tqdm = "==4.62.3"
+virtualenv = "==20.9.0"
+virtualenv-clone = "==0.5.7"
+Flask = "==2.0.2"
+Flask-SQLAlchemy = "==2.5.1"
+Jinja2 = "==3.0.2"
+Mako = "==1.1.5"
+Markdown = "==3.3.4"
+MarkupSafe = "==2.0.1"
+SQLAlchemy = "==1.4.26"
+Werkzeug = "==2.0.2"
+psycopg2 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

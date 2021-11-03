@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+ </head>
+
+ <body>
+    <div style="margin-top: 50px;">
+        <h1 class="ui center aligned header">Employees</h1>
+
+
+
+
+
+
+        <form action="/add" method="post" >
+           
+            
+            <div class="form-row">
+                <button class="ui blue button" type="submit">Add</button>
+                <div class="col-1">
+                  <input name="code" type="integer" class="form-control" placeholder="Number">
+                </div>
+                <div class="col-5">
+                  <input name="fname" type="text" class="form-control" placeholder="Fname">
+                </div>
+                <div class="col">
+                  <input name="name2"type="text" class="form-control" placeholder="Sname">
+                </div>
+                
+            
+            </div>
+            
+            
+                
+        </form> 
+        
+        <hr>
+
+        {% for todo in todo_list %}
+        <div class="ui segment">
+          <p class="ui big header">{{todo.id }} | {{ todo.title }}</p>
+
+            {% if todo.complete == False %}
+            <span class="ui gray label">Not Complete</span>
+            {% else %}
+            <span class="ui green label">Completed</span>
+            {% endif %}
+
+            <a class="ui blue button" href="/update/{{ todo.id }}">Update</a>
+            <a class="ui red button" href="/delete/{{ todo.id }}">Delete</a>
+        </div>
+        {% endfor %}
+    </div>
+  </body>
+
+</html>
+           
+                         
+                    
+                    
+                    
+                    
+                   
+
+
+           
+            
+            
+        
+                       
+                        
+              
+                
+                            
+            
+            
+
